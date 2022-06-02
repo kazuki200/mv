@@ -1,0 +1,35 @@
+CREATE DATABASE recipesdb;
+
+use recipesdb;
+
+CREATE TABLE users(
+  userId INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(255) NOT NULL,
+  pass VARCHAR(255) NOT NULL,
+  username VARCHAR(255) NOT NULL,
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE favorites(
+  favoriteId INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  recipesId INT,
+);
+
+CREATE TABLE recipes(
+  recipeId INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  time INT NOT NULL,
+  carori INT NOT NULL,
+  cost INT NOT NULL,
+  evalaations INT,
+  categoryId INT,
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE categorys(
+  categoryId INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  categoryName VARCHAR(255) NOT NULL,
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+describe users;
