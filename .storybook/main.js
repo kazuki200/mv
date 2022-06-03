@@ -4,6 +4,10 @@ module.exports = {
     "../src/stories/**/*.stories.@(js|jsx|ts|tsx)",
     "../src/stories/Components/**/*.stories.@(js|jsx|ts|tsx)",
   ],
+  babel: (config) => {
+    config.presets.push(require.resolve("@emotion/babel-preset-css-prop"));
+    return config;
+  },
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",

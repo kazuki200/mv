@@ -1,3 +1,5 @@
+import { colors } from "../src/lib/style";
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -6,4 +8,17 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+  backgrounds: {
+    default: "white",
+    values: [
+      {
+        name: "white",
+        value: `${colors.white}`,
+      },
+      {
+        name: "headerColor",
+        value: `${colors.dark_blue}`,
+      },
+    ],
+  },
+};

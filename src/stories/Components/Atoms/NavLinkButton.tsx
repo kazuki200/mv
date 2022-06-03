@@ -1,16 +1,7 @@
 import { css, jsx } from "@emotion/react";
-import styled from "@emotion/styled/types/base";
-
-import React from "react";
 import { FC } from "react";
-import { NAVLINKBUTTON } from "../../../types/Types";
-
-const sytles = {
-  button: css`
-    text-decoration: none;
-    color: red;
-  `,
-};
+import { NAVLINKBUTTON } from "../../../types/NavLinkButton";
+import { colors } from "../../../lib/style";
 
 export const NavLinkButton: FC<NAVLINKBUTTON> = ({ href, label }) => {
   return (
@@ -18,4 +9,12 @@ export const NavLinkButton: FC<NAVLINKBUTTON> = ({ href, label }) => {
       {label}
     </a>
   );
+};
+
+const sytles = {
+  button: css`
+    text-decoration: none;
+    color: ${colors.white};
+    font-weight: bold;
+  `,
 };
