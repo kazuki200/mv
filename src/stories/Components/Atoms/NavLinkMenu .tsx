@@ -1,9 +1,14 @@
 import { css } from "@emotion/react";
 import { colors } from "../../../lib/style";
 import React, { FC } from "react";
-import { NAVLINKMENU } from "../../../types/NavLinkMenu";
 
-export const NavLinkMenu: FC<NAVLINKMENU> = ({ link }) => {
+export type PROPS = {
+  link: { label: string; href: string }[];
+  backgrounds: {};
+};
+
+
+export const NavLinkMenu: FC<PROPS> = ({ link }) => {
   return (
     <ul css={wrapper}>
       {link.map((link) => (

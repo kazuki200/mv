@@ -10,12 +10,12 @@ const Template: ComponentStory<typeof NavLinkButton> = (args) => (
   <NavLinkButton {...args} />
 );
 
-export const Primary = Template.bind({});
+export const Default = Template.bind({});
 
-Primary.args = {
+Default.args = {
   label: "映画",
   href: "/movie",
 };
-Primary.parameters = {
+Default.parameters = {
   backgrounds: { default: "headerColor" },
 };

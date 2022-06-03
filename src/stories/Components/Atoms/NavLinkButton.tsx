@@ -1,9 +1,14 @@
 import { css, jsx } from "@emotion/react";
 import { FC } from "react";
-import { NAVLINKBUTTON } from "../../../types/NavLinkButton";
 import { colors } from "../../../lib/style";
 
-export const NavLinkButton: FC<NAVLINKBUTTON> = ({ href, label }) => {
+type PROPS = {
+  href: string;
+  label: string;
+  backgrounds: {};
+};
+
+export const NavLinkButton: FC<PROPS> = ({ href, label }) => {
   return (
     <a css={sytles.button} href={href}>
       {label}

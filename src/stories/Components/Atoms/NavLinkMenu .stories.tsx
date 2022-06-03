@@ -10,9 +10,9 @@ const Template: ComponentStory<typeof NavLinkMenu> = (args) => (
   <NavLinkMenu {...args} />
 );
 
-export const Primary = Template.bind({});
+export const Default = Template.bind({});
 
-Primary.args = {
+Default.args = {
   link: [
     { label: "人気", href: "test1" },
     { label: "上映中", href: "test2" },
@@ -20,6 +20,6 @@ Primary.args = {
     { label: "高評価", href: "test4" },
   ],
 };
-Primary.parameters = {
+Default.parameters = {
   backgrounds: { default: "headerColor" },
 };
